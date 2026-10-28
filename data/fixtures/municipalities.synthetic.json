@@ -1,0 +1,71 @@
+[
+  {
+    "municipality_code": "DEMO001",
+    "name": "Município Demonstração A",
+    "state_code": "XX",
+    "is_synthetic": true,
+    "indicators": [
+      {"evidence_id": "DEMO001-POP-01", "indicator": "population_estimate", "value": 18000, "unit": "people", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Valor hipotético para fixture; não representa população observada."]},
+      {"evidence_id": "DEMO001-DEMAND-01", "indicator": "demand_proxy_index", "value": 86, "unit": "points (0-100)", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Índice ilustrativo sem método empírico ou validade preditiva."]},
+      {"evidence_id": "DEMO001-GAP-01", "indicator": "social_access_gap_pct", "value": 18, "unit": "%", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Percentual hipotético, criado apenas para demonstração."]},
+      {"evidence_id": "DEMO001-INCOME-01", "indicator": "monthly_income_proxy_brl", "value": 3400, "unit": "BRL/month", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Proxy e valor hipotéticos; não descrevem pessoas ou famílias reais."]},
+      {"evidence_id": "DEMO001-COVERAGE-01", "indicator": "reported_coverage_pct", "value": 72, "unit": "%", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Cobertura hipotética; não é medição nem declaração de operadora."]},
+      {"evidence_id": "DEMO001-COST-01", "indicator": "estimated_base_cost_brl", "value": 420000, "unit": "BRL", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Custo hipotético, sem orçamento de engenharia."]},
+      {"evidence_id": "DEMO001-TECH-01", "indicator": "technical_constraint_level", "value": "moderada", "unit": "category", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Classificação inventada para compor o cenário de teste."]},
+      {"evidence_id": "DEMO001-BACKHAUL-01", "indicator": "backhaul_capacity_mbps", "value": null, "unit": "Mbps", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Capacidade de backhaul não disponível nesta fixture."]},
+      {"evidence_id": "DEMO001-SITES-01", "indicator": "powered_sites_estimate", "value": 6, "unit": "sites", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Quantidade hipotética; não representa infraestrutura existente."]},
+      {"evidence_id": "DEMO001-POWER-01", "indicator": "electricity_availability", "value": "partial", "unit": "category", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Categoria hipotética, sem levantamento de campo."]}
+    ],
+    "anchor_institutions": [
+      {"institution_id": "DEMO001-SCHOOL-01", "name": "Escola Demonstração A1", "institution_type": "school", "municipality_code": "DEMO001", "evidence_ids": ["DEMO001-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true},
+      {"institution_id": "DEMO001-HEALTH-01", "name": "Unidade de Saúde Demonstração A1", "institution_type": "health_unit", "municipality_code": "DEMO001", "evidence_ids": ["DEMO001-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true}
+    ]
+  },
+  {
+    "municipality_code": "DEMO002",
+    "name": "Município Demonstração B",
+    "state_code": "XX",
+    "is_synthetic": true,
+    "indicators": [
+      {"evidence_id": "DEMO002-POP-01", "indicator": "population_estimate", "value": 24000, "unit": "people", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Valor hipotético para fixture; não representa população observada."]},
+      {"evidence_id": "DEMO002-DEMAND-01", "indicator": "demand_proxy_index", "value": 54, "unit": "points (0-100)", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Índice ilustrativo sem método empírico ou validade preditiva."]},
+      {"evidence_id": "DEMO002-GAP-01", "indicator": "social_access_gap_pct", "value": 67, "unit": "%", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Percentual hipotético, criado apenas para demonstração."]},
+      {"evidence_id": "DEMO002-INCOME-01", "indicator": "monthly_income_proxy_brl", "value": 1600, "unit": "BRL/month", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Proxy e valor hipotéticos; não descrevem pessoas ou famílias reais."]},
+      {"evidence_id": "DEMO002-COVERAGE-01", "indicator": "reported_coverage_pct", "value": 35, "unit": "%", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Cobertura hipotética; não é medição nem declaração de operadora."]},
+      {"evidence_id": "DEMO002-COST-01", "indicator": "estimated_base_cost_brl", "value": 450000, "unit": "BRL", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Custo hipotético, sem orçamento de engenharia."]},
+      {"evidence_id": "DEMO002-TECH-01", "indicator": "technical_constraint_level", "value": "moderada", "unit": "category", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Classificação inventada para compor o cenário de teste."]},
+      {"evidence_id": "DEMO002-BACKHAUL-01", "indicator": "backhaul_capacity_mbps", "value": 120, "unit": "Mbps", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Capacidade hipotética; não representa infraestrutura existente."]},
+      {"evidence_id": "DEMO002-SITES-01", "indicator": "powered_sites_estimate", "value": 4, "unit": "sites", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Quantidade hipotética; não representa infraestrutura existente."]},
+      {"evidence_id": "DEMO002-POWER-01", "indicator": "electricity_availability", "value": "partial", "unit": "category", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Categoria hipotética, sem levantamento de campo."]},
+      {"evidence_id": "DEMO002-BUDGET-01", "indicator": "planning_budget_ceiling_brl", "value": 400000, "unit": "BRL", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Teto hipotético do cenário, não é dotação ou aprovação orçamentária real."]}
+    ],
+    "anchor_institutions": [
+      {"institution_id": "DEMO002-SCHOOL-01", "name": "Escola Demonstração B1", "institution_type": "school", "municipality_code": "DEMO002", "evidence_ids": ["DEMO002-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true},
+      {"institution_id": "DEMO002-SCHOOL-02", "name": "Escola Demonstração B2", "institution_type": "school", "municipality_code": "DEMO002", "evidence_ids": ["DEMO002-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true},
+      {"institution_id": "DEMO002-HEALTH-01", "name": "Unidade de Saúde Demonstração B1", "institution_type": "health_unit", "municipality_code": "DEMO002", "evidence_ids": ["DEMO002-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true},
+      {"institution_id": "DEMO002-OTHER-01", "name": "Equipamento Público Demonstração B1", "institution_type": "other_public", "municipality_code": "DEMO002", "evidence_ids": ["DEMO002-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true}
+    ]
+  },
+  {
+    "municipality_code": "DEMO003",
+    "name": "Município Demonstração C",
+    "state_code": "XX",
+    "is_synthetic": true,
+    "indicators": [
+      {"evidence_id": "DEMO003-POP-01", "indicator": "population_estimate", "value": 13000, "unit": "people", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Valor hipotético para fixture; não representa população observada."]},
+      {"evidence_id": "DEMO003-DEMAND-01", "indicator": "demand_proxy_index", "value": 28, "unit": "points (0-100)", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Índice ilustrativo sem método empírico ou validade preditiva."]},
+      {"evidence_id": "DEMO003-GAP-01", "indicator": "social_access_gap_pct", "value": 49, "unit": "%", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Percentual hipotético, criado apenas para demonstração."]},
+      {"evidence_id": "DEMO003-INCOME-01", "indicator": "monthly_income_proxy_brl", "value": null, "unit": "BRL/month", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Proxy de renda indisponível; não foi substituído por zero."]},
+      {"evidence_id": "DEMO003-COVERAGE-01", "indicator": "reported_coverage_pct", "value": null, "unit": "%", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Cobertura indisponível; precisa de fonte ou levantamento apropriado."]},
+      {"evidence_id": "DEMO003-COST-01", "indicator": "estimated_base_cost_brl", "value": null, "unit": "BRL", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Custo indisponível; nenhum orçamento foi presumido."]},
+      {"evidence_id": "DEMO003-TECH-01", "indicator": "technical_constraint_level", "value": "severa", "unit": "category", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Classificação inventada para representar um cenário de maior restrição técnica."]},
+      {"evidence_id": "DEMO003-BACKHAUL-01", "indicator": "backhaul_capacity_mbps", "value": null, "unit": "Mbps", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Capacidade de backhaul indisponível nesta fixture."]},
+      {"evidence_id": "DEMO003-SITES-01", "indicator": "powered_sites_estimate", "value": 2, "unit": "sites", "kind": "hypothetical", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Quantidade hipotética; não representa infraestrutura existente."]},
+      {"evidence_id": "DEMO003-POWER-01", "indicator": "electricity_availability", "value": null, "unit": "category", "kind": "unavailable", "source_name": "Cenário sintético de demonstração", "source_url": null, "reference_year": null, "collected_at": null, "is_synthetic": true, "limitations": ["Disponibilidade elétrica não verificada."]}
+    ],
+    "anchor_institutions": [
+      {"institution_id": "DEMO003-SCHOOL-01", "name": "Escola Demonstração C1", "institution_type": "school", "municipality_code": "DEMO003", "evidence_ids": ["DEMO003-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true},
+      {"institution_id": "DEMO003-HEALTH-01", "name": "Unidade de Saúde Demonstração C1", "institution_type": "health_unit", "municipality_code": "DEMO003", "evidence_ids": ["DEMO003-GAP-01"], "connectivity_status": "unknown", "is_synthetic": true}
+    ]
+  }
+]

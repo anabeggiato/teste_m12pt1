@@ -1,0 +1,93 @@
+{
+  "source_name": "IBGE/SIDRA — Censo Demográfico 2022, Tabela 4709",
+  "table_code": "4709",
+  "variable_code": "93",
+  "reference_year": 2022,
+  "retrieved_at": "2026-10-27T15:00:22+00:00",
+  "records_by_ibge_code": {
+    "1302603": [
+      {
+        "NC": "Nível Territorial (Código)",
+        "NN": "Nível Territorial",
+        "MC": "Unidade de Medida (Código)",
+        "MN": "Unidade de Medida",
+        "V": "Valor",
+        "D1C": "Município (Código)",
+        "D1N": "Município",
+        "D2C": "Variável (Código)",
+        "D2N": "Variável",
+        "D3C": "Ano (Código)",
+        "D3N": "Ano"
+      },
+      {
+        "NC": "6",
+        "NN": "Município",
+        "MC": "45",
+        "MN": "Pessoas",
+        "V": "2063689",
+        "D1C": "1302603",
+        "D1N": "Manaus (AM)",
+        "D2C": "93",
+        "D2N": "População residente",
+        "D3C": "2022",
+        "D3N": "2022"
+      }
+    ],
+    "2611606": [
+      {
+        "NC": "Nível Territorial (Código)",
+        "NN": "Nível Territorial",
+        "MC": "Unidade de Medida (Código)",
+        "MN": "Unidade de Medida",
+        "V": "Valor",
+        "D1C": "Município (Código)",
+        "D1N": "Município",
+        "D2C": "Variável (Código)",
+        "D2N": "Variável",
+        "D3C": "Ano (Código)",
+        "D3N": "Ano"
+      },
+      {
+        "NC": "6",
+        "NN": "Município",
+        "MC": "45",
+        "MN": "Pessoas",
+        "V": "1488920",
+        "D1C": "2611606",
+        "D1N": "Recife (PE)",
+        "D2C": "93",
+        "D2N": "População residente",
+        "D3C": "2022",
+        "D3N": "2022"
+      }
+    ],
+    "3550308": [
+      {
+        "NC": "Nível Territorial (Código)",
+        "NN": "Nível Territorial",
+        "MC": "Unidade de Medida (Código)",
+        "MN": "Unidade de Medida",
+        "V": "Valor",
+        "D1C": "Município (Código)",
+        "D1N": "Município",
+        "D2C": "Variável (Código)",
+        "D2N": "Variável",
+        "D3C": "Ano (Código)",
+        "D3N": "Ano"
+      },
+      {
+        "NC": "6",
+        "NN": "Município",
+        "MC": "45",
+        "MN": "Pessoas",
+        "V": "11451999",
+        "D1C": "3550308",
+        "D1N": "São Paulo (SP)",
+        "D2C": "93",
+        "D2N": "População residente",
+        "D3C": "2022",
+        "D3N": "2022"
+      }
+    ]
+  }
+}

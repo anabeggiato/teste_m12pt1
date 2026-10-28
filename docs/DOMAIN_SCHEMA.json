@@ -1,0 +1,1067 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conecta Conselho — catálogo de schemas do domínio",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Evidence"
+    },
+    {
+      "$ref": "#/$defs/AnchorInstitution"
+    },
+    {
+      "$ref": "#/$defs/Municipality"
+    },
+    {
+      "$ref": "#/$defs/AgentOpinion"
+    },
+    {
+      "$ref": "#/$defs/SimulationParameters"
+    },
+    {
+      "$ref": "#/$defs/ScenarioResult"
+    },
+    {
+      "$ref": "#/$defs/ScenarioComparison"
+    },
+    {
+      "$ref": "#/$defs/ScoreResult"
+    },
+    {
+      "$ref": "#/$defs/AnalysisRequest"
+    },
+    {
+      "$ref": "#/$defs/AnalysisError"
+    },
+    {
+      "$ref": "#/$defs/BridgeCandidate"
+    },
+    {
+      "$ref": "#/$defs/BridgeProposal"
+    },
+    {
+      "$ref": "#/$defs/BridgeScenarioAnalysis"
+    },
+    {
+      "$ref": "#/$defs/Disagreement"
+    },
+    {
+      "$ref": "#/$defs/GuardianDecision"
+    },
+    {
+      "$ref": "#/$defs/AnalysisResult"
+    }
+  ],
+  "$defs": {
+    "EvidenceKind": {
+      "enum": [
+        "observed",
+        "estimated",
+        "hypothetical",
+        "unavailable"
+      ],
+      "title": "EvidenceKind",
+      "type": "string"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "indicator": {
+          "minLength": 1,
+          "title": "Indicator",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "source_name": {
+          "minLength": 1,
+          "title": "Source Name",
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "source_license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source License"
+        },
+        "reference_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Year"
+        },
+        "collected_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Collected At"
+        },
+        "is_synthetic": {
+          "default": false,
+          "title": "Is Synthetic",
+          "type": "boolean"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "indicator",
+        "value",
+        "kind",
+        "source_name"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "ConnectivityStatus": {
+      "enum": [
+        "unknown",
+        "connected",
+        "unconnected"
+      ],
+      "title": "ConnectivityStatus",
+      "type": "string"
+    },
+    "InstitutionType": {
+      "enum": [
+        "school",
+        "health_unit",
+        "other_public"
+      ],
+      "title": "InstitutionType",
+      "type": "string"
+    },
+    "AnchorInstitution": {
+      "additionalProperties": false,
+      "properties": {
+        "institution_id": {
+          "minLength": 1,
+          "title": "Institution Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "institution_type": {
+          "$ref": "#/$defs/InstitutionType"
+        },
+        "municipality_code": {
+          "minLength": 1,
+          "title": "Municipality Code",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "connectivity_status": {
+          "$ref": "#/$defs/ConnectivityStatus",
+          "default": "unknown"
+        },
+        "is_synthetic": {
+          "default": false,
+          "title": "Is Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "institution_id",
+        "name",
+        "institution_type",
+        "municipality_code"
+      ],
+      "title": "AnchorInstitution",
+      "type": "object"
+    },
+    "Municipality": {
+      "additionalProperties": false,
+      "properties": {
+        "municipality_code": {
+          "minLength": 1,
+          "title": "Municipality Code",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "state_code": {
+          "minLength": 1,
+          "title": "State Code",
+          "type": "string"
+        },
+        "indicators": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Indicators",
+          "type": "array"
+        },
+        "anchor_institutions": {
+          "items": {
+            "$ref": "#/$defs/AnchorInstitution"
+          },
+          "title": "Anchor Institutions",
+          "type": "array"
+        },
+        "is_synthetic": {
+          "title": "Is Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "municipality_code",
+        "name",
+        "state_code",
+        "indicators",
+        "anchor_institutions",
+        "is_synthetic"
+      ],
+      "title": "Municipality",
+      "type": "object"
+    },
+    "AgentOpinion": {
+      "additionalProperties": false,
+      "properties": {
+        "agent_name": {
+          "minLength": 1,
+          "title": "Agent Name",
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "favorable",
+            "conditional",
+            "unfavorable",
+            "insufficient_data"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "supporting_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Evidence Ids",
+          "type": "array"
+        },
+        "risks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Risks",
+          "type": "array"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "missing_data": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Data",
+          "type": "array"
+        },
+        "confidence_level": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "agent_name",
+        "position",
+        "summary",
+        "confidence_level"
+      ],
+      "title": "AgentOpinion",
+      "type": "object"
+    },
+    "SimulationParameters": {
+      "additionalProperties": false,
+      "properties": {
+        "budget_ceiling_brl": {
+          "minimum": 0,
+          "title": "Budget Ceiling Brl",
+          "type": "number"
+        },
+        "estimated_base_cost_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimated Base Cost Brl"
+        },
+        "estimated_cost_per_anchor_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimated Cost Per Anchor Brl"
+        },
+        "hypothetical_monthly_anchor_revenue_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothetical Monthly Anchor Revenue Brl"
+        },
+        "scenario_horizon_months": {
+          "default": 12,
+          "maximum": 120,
+          "minimum": 1,
+          "title": "Scenario Horizon Months",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "budget_ceiling_brl"
+      ],
+      "title": "SimulationParameters",
+      "type": "object"
+    },
+    "ScenarioResult": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_name": {
+          "minLength": 1,
+          "title": "Scenario Name",
+          "type": "string"
+        },
+        "selected_anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Selected Anchor Ids",
+          "type": "array"
+        },
+        "estimated_total_cost_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimated Total Cost Brl"
+        },
+        "hypothetical_anchor_revenue_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothetical Anchor Revenue Brl"
+        },
+        "hypothetical_net_balance_brl": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothetical Net Balance Brl"
+        },
+        "within_budget": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Within Budget"
+        },
+        "calculation_notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Calculation Notes",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "scenario_name",
+        "within_budget"
+      ],
+      "title": "ScenarioResult",
+      "type": "object"
+    },
+    "ScenarioComparison": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_cost_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Cost Brl"
+        },
+        "with_bridges_cost_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "With Bridges Cost Brl"
+        },
+        "incremental_cost_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Incremental Cost Brl"
+        },
+        "incremental_hypothetical_revenue_brl": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Incremental Hypothetical Revenue Brl"
+        },
+        "hypothetical_net_balance_brl": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothetical Net Balance Brl"
+        },
+        "within_budget": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Within Budget"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "within_budget"
+      ],
+      "title": "ScenarioComparison",
+      "type": "object"
+    },
+    "ScoreResult": {
+      "additionalProperties": false,
+      "properties": {
+        "score_name": {
+          "enum": [
+            "market_opportunity",
+            "social_priority",
+            "technical_feasibility"
+          ],
+          "title": "Score Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "missing_indicators": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Indicators",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "score_name",
+        "explanation"
+      ],
+      "title": "ScoreResult",
+      "type": "object"
+    },
+    "AnalysisRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "municipality_code": {
+          "minLength": 1,
+          "title": "Municipality Code",
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/$defs/SimulationParameters"
+        },
+        "selected_anchor_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Anchor Ids"
+        }
+      },
+      "required": [
+        "municipality_code",
+        "parameters"
+      ],
+      "title": "AnalysisRequest",
+      "type": "object"
+    },
+    "AnalysisError": {
+      "additionalProperties": false,
+      "properties": {
+        "node": {
+          "minLength": 1,
+          "title": "Node",
+          "type": "string"
+        },
+        "error_type": {
+          "minLength": 1,
+          "title": "Error Type",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "node",
+        "error_type",
+        "message"
+      ],
+      "title": "AnalysisError",
+      "type": "object"
+    },
+    "BridgeCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "institution_id": {
+          "minLength": 1,
+          "title": "Institution Id",
+          "type": "string"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "partnership_status": {
+          "const": "unverified",
+          "default": "unverified",
+          "title": "Partnership Status",
+          "type": "string"
+        },
+        "priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Priority",
+          "type": "string"
+        },
+        "caveats": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Caveats",
+          "type": "array"
+        }
+      },
+      "required": [
+        "institution_id",
+        "rationale",
+        "priority"
+      ],
+      "title": "BridgeCandidate",
+      "type": "object"
+    },
+    "BridgeProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/BridgeCandidate"
+          },
+          "title": "Candidates",
+          "type": "array"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        }
+      },
+      "title": "BridgeProposal",
+      "type": "object"
+    },
+    "BridgeScenarioAnalysis": {
+      "additionalProperties": false,
+      "properties": {
+        "municipality": {
+          "$ref": "#/$defs/Municipality"
+        },
+        "proposal": {
+          "$ref": "#/$defs/BridgeProposal"
+        },
+        "selected_anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Selected Anchor Ids",
+          "type": "array"
+        },
+        "baseline": {
+          "$ref": "#/$defs/ScenarioResult"
+        },
+        "with_bridges": {
+          "$ref": "#/$defs/ScenarioResult"
+        },
+        "comparison": {
+          "$ref": "#/$defs/ScenarioComparison"
+        }
+      },
+      "required": [
+        "municipality",
+        "proposal",
+        "baseline",
+        "with_bridges",
+        "comparison"
+      ],
+      "title": "BridgeScenarioAnalysis",
+      "type": "object"
+    },
+    "Disagreement": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "minLength": 1,
+          "title": "Topic",
+          "type": "string"
+        },
+        "opinions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Opinions",
+          "type": "array"
+        },
+        "resolution_status": {
+          "minLength": 1,
+          "title": "Resolution Status",
+          "type": "string"
+        },
+        "questions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "topic",
+        "resolution_status"
+      ],
+      "title": "Disagreement",
+      "type": "object"
+    },
+    "Decision": {
+      "enum": [
+        "INVESTIR",
+        "PILOTAR",
+        "AGUARDAR",
+        "REVISAO_HUMANA"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "GuardianDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {
+          "$ref": "#/$defs/Decision"
+        },
+        "original_decision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Decision"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "final_decision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Decision"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "guard_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Guard Reasons",
+          "type": "array"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "blockers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Blockers",
+          "type": "array"
+        },
+        "unresolved_questions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unresolved Questions",
+          "type": "array"
+        },
+        "cited_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Cited Evidence Ids",
+          "type": "array"
+        },
+        "requires_human_approval": {
+          "const": true,
+          "default": true,
+          "title": "Requires Human Approval",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "decision",
+        "rationale"
+      ],
+      "title": "GuardianDecision",
+      "type": "object"
+    },
+    "AnalysisResult": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_id": {
+          "minLength": 1,
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "created_at": {
+          "minLength": 1,
+          "title": "Created At",
+          "type": "string"
+        },
+        "municipality": {
+          "$ref": "#/$defs/Municipality"
+        },
+        "opinions": {
+          "items": {
+            "$ref": "#/$defs/AgentOpinion"
+          },
+          "title": "Opinions",
+          "type": "array"
+        },
+        "bridge_proposal": {
+          "$ref": "#/$defs/BridgeProposal"
+        },
+        "baseline": {
+          "$ref": "#/$defs/ScenarioResult"
+        },
+        "with_bridges": {
+          "$ref": "#/$defs/ScenarioResult"
+        },
+        "comparison": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioComparison"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "disagreements": {
+          "items": {
+            "$ref": "#/$defs/Disagreement"
+          },
+          "title": "Disagreements",
+          "type": "array"
+        },
+        "guardian": {
+          "$ref": "#/$defs/GuardianDecision"
+        },
+        "evidence_catalog": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence Catalog",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/$defs/AnalysisError"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "status": {
+          "default": "completed",
+          "enum": [
+            "completed",
+            "degraded"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "mock",
+            "ollama"
+          ],
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "created_at",
+        "municipality",
+        "bridge_proposal",
+        "baseline",
+        "with_bridges",
+        "guardian",
+        "mode"
+      ],
+      "title": "AnalysisResult",
+      "type": "object"
+    }
+  }
+}

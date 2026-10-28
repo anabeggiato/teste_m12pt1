@@ -1,0 +1,80 @@
+[
+  {
+    "municipality_code": "1302603",
+    "name": "Manaus",
+    "state_code": "AM",
+    "indicators": [
+      {
+        "evidence_id": "sidra-4709-93-2022-1302603",
+        "indicator": "resident_population",
+        "value": 2063689,
+        "unit": "people",
+        "kind": "observed",
+        "source_name": "IBGE/SIDRA — Censo Demográfico 2022, Tabela 4709",
+        "source_url": "https://apisidra.ibge.gov.br/values/t/4709/n6/1302603/v/93/p/2022",
+        "source_license": "Dados estatísticos públicos; reutilização com atribuição ao IBGE conforme política federal de dados abertos. Nenhuma licença CC específica foi identificada.",
+        "reference_year": 2022,
+        "collected_at": "2026-10-27T15:00:22+00:00",
+        "is_synthetic": false,
+        "limitations": [
+          "Contagem censitária total; não mede cobertura, demanda, custo ou receita.",
+          "Indicadores de conectividade e instituições não foram ingeridos nesta fase."
+        ]
+      }
+    ],
+    "anchor_institutions": [],
+    "is_synthetic": false
+  },
+  {
+    "municipality_code": "2611606",
+    "name": "Recife",
+    "state_code": "PE",
+    "indicators": [
+      {
+        "evidence_id": "sidra-4709-93-2022-2611606",
+        "indicator": "resident_population",
+        "value": 1488920,
+        "unit": "people",
+        "kind": "observed",
+        "source_name": "IBGE/SIDRA — Censo Demográfico 2022, Tabela 4709",
+        "source_url": "https://apisidra.ibge.gov.br/values/t/4709/n6/2611606/v/93/p/2022",
+        "source_license": "Dados estatísticos públicos; reutilização com atribuição ao IBGE conforme política federal de dados abertos. Nenhuma licença CC específica foi identificada.",
+        "reference_year": 2022,
+        "collected_at": "2026-10-27T15:00:22+00:00",
+        "is_synthetic": false,
+        "limitations": [
+          "Contagem censitária total; não mede cobertura, demanda, custo ou receita.",
+          "Indicadores de conectividade e instituições não foram ingeridos nesta fase."
+        ]
+      }
+    ],
+    "anchor_institutions": [],
+    "is_synthetic": false
+  },
+  {
+    "municipality_code": "3550308",
+    "name": "São Paulo",
+    "state_code": "SP",
+    "indicators": [
+      {
+        "evidence_id": "sidra-4709-93-2022-3550308",
+        "indicator": "resident_population",
+        "value": 11451999,
+        "unit": "people",
+        "kind": "observed",
+        "source_name": "IBGE/SIDRA — Censo Demográfico 2022, Tabela 4709",
+        "source_url": "https://apisidra.ibge.gov.br/values/t/4709/n6/3550308/v/93/p/2022",
+        "source_license": "Dados estatísticos públicos; reutilização com atribuição ao IBGE conforme política federal de dados abertos. Nenhuma licença CC específica foi identificada.",
+        "reference_year": 2022,
+        "collected_at": "2026-10-27T15:00:22+00:00",
+        "is_synthetic": false,
+        "limitations": [
+          "Contagem censitária total; não mede cobertura, demanda, custo ou receita.",
+          "Indicadores de conectividade e instituições não foram ingeridos nesta fase."
+        ]
+      }
+    ],
+    "anchor_institutions": [],
+    "is_synthetic": false
+  }
+]

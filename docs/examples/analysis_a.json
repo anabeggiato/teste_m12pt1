@@ -1,0 +1,606 @@
+{
+  "case_id": "A",
+  "description": "Um equipamento âncora; todos os números monetários são premissas hipotéticas.",
+  "captured_at": "2026-10-28T11:31:00+00:00",
+  "request": {
+    "municipality_code": "DEMO001",
+    "parameters": {
+      "budget_ceiling_brl": 500000,
+      "estimated_base_cost_brl": 350000,
+      "estimated_cost_per_anchor_brl": 40000,
+      "hypothetical_monthly_anchor_revenue_brl": 1200,
+      "scenario_horizon_months": 12
+    },
+    "selected_anchor_ids": [
+      "DEMO001-SCHOOL-01"
+    ]
+  },
+  "result": {
+    "analysis_id": "6798b039-b74e-4bc4-a37b-be7ddf1685ee",
+    "created_at": "2026-10-28T11:31:00.814365+00:00",
+    "municipality": {
+      "municipality_code": "DEMO001",
+      "name": "Município Demonstração A",
+      "state_code": "XX",
+      "indicators": [
+        {
+          "evidence_id": "DEMO001-POP-01",
+          "indicator": "population_estimate",
+          "value": 18000,
+          "unit": "people",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Valor hipotético para fixture; não representa população observada."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-DEMAND-01",
+          "indicator": "demand_proxy_index",
+          "value": 86,
+          "unit": "points (0-100)",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Índice ilustrativo sem método empírico ou validade preditiva."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-GAP-01",
+          "indicator": "social_access_gap_pct",
+          "value": 18,
+          "unit": "%",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Percentual hipotético, criado apenas para demonstração."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-INCOME-01",
+          "indicator": "monthly_income_proxy_brl",
+          "value": 3400,
+          "unit": "BRL/month",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Proxy e valor hipotéticos; não descrevem pessoas ou famílias reais."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-COVERAGE-01",
+          "indicator": "reported_coverage_pct",
+          "value": 72,
+          "unit": "%",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Cobertura hipotética; não é medição nem declaração de operadora."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-COST-01",
+          "indicator": "estimated_base_cost_brl",
+          "value": 420000,
+          "unit": "BRL",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Custo hipotético, sem orçamento de engenharia."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-TECH-01",
+          "indicator": "technical_constraint_level",
+          "value": "moderada",
+          "unit": "category",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Classificação inventada para compor o cenário de teste."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-BACKHAUL-01",
+          "indicator": "backhaul_capacity_mbps",
+          "value": null,
+          "unit": "Mbps",
+          "kind": "unavailable",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Capacidade de backhaul não disponível nesta fixture."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-SITES-01",
+          "indicator": "powered_sites_estimate",
+          "value": 6,
+          "unit": "sites",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Quantidade hipotética; não representa infraestrutura existente."
+          ]
+        },
+        {
+          "evidence_id": "DEMO001-POWER-01",
+          "indicator": "electricity_availability",
+          "value": "partial",
+          "unit": "category",
+          "kind": "hypothetical",
+          "source_name": "Cenário sintético de demonstração",
+          "source_url": null,
+          "source_license": null,
+          "reference_year": null,
+          "collected_at": null,
+          "is_synthetic": true,
+          "limitations": [
+            "Categoria hipotética, sem levantamento de campo."
+          ]
+        }
+      ],
+      "anchor_institutions": [
+        {
+          "institution_id": "DEMO001-SCHOOL-01",
+          "name": "Escola Demonstração A1",
+          "institution_type": "school",
+          "municipality_code": "DEMO001",
+          "evidence_ids": [
+            "DEMO001-GAP-01"
+          ],
+          "connectivity_status": "unknown",
+          "is_synthetic": true
+        },
+        {
+          "institution_id": "DEMO001-HEALTH-01",
+          "name": "Unidade de Saúde Demonstração A1",
+          "institution_type": "health_unit",
+          "municipality_code": "DEMO001",
+          "evidence_ids": [
+            "DEMO001-GAP-01"
+          ],
+          "connectivity_status": "unknown",
+          "is_synthetic": true
+        }
+      ],
+      "is_synthetic": true
+    },
+    "opinions": [
+      {
+        "agent_name": "financial",
+        "position": "conditional",
+        "summary": "O proxy de demanda (hypothetical) foi considerado como sinal de triagem [DEMO001-DEMAND-01], mas não demonstra clientes, receita ou retorno.",
+        "supporting_evidence_ids": [
+          "DEMO001-DEMAND-01",
+          "DEMO001-COST-01"
+        ],
+        "risks": [
+          "Indicadores hipotéticos não validam demanda contratante.",
+          "Sem preço e adesão, não há base para estimar sustentabilidade ou ROI."
+        ],
+        "assumptions": [
+          "Parâmetros de custo fornecidos pelo usuário são premissas, não orçamento executivo.",
+          "A localidade e suas evidências são sintéticas."
+        ],
+        "missing_data": [
+          "preço e taxa de adesão",
+          "ARPU, margem e dados comerciais observados"
+        ],
+        "confidence_level": "low"
+      },
+      {
+        "agent_name": "social",
+        "position": "conditional",
+        "summary": "O indicador de lacuna de acesso (hypothetical) é um sinal para triagem social [DEMO001-GAP-01], não uma medição de impacto.",
+        "supporting_evidence_ids": [
+          "DEMO001-GAP-01"
+        ],
+        "risks": [
+          "Lacuna de acesso não comprova demanda contratante nem resultado social causado pela expansão.",
+          "As fixtures não medem efeitos causais em educação, saúde ou inclusão."
+        ],
+        "assumptions": [
+          "O indicador é sintético/hipotético e não descreve população real."
+        ],
+        "missing_data": [
+          "medição observada de acesso à conectividade",
+          "efeitos distributivos e resultados locais em educação e saúde",
+          "consulta e validação com instituições públicas"
+        ],
+        "confidence_level": "low"
+      },
+      {
+        "agent_name": "technical",
+        "position": "conditional",
+        "summary": "Há indicadores técnicos para triagem, mas eles não comprovam infraestrutura instalada ou capacidade de atendimento; é necessário survey de campo.",
+        "supporting_evidence_ids": [
+          "DEMO001-COVERAGE-01",
+          "DEMO001-TECH-01",
+          "DEMO001-BACKHAUL-01",
+          "DEMO001-SITES-01",
+          "DEMO001-POWER-01"
+        ],
+        "risks": [
+          "Evidências hipotéticas ou estimadas não comprovam disponibilidade de rede.",
+          "Fibra, espectro, torres, energia e capacidade não foram presumidos."
+        ],
+        "assumptions": [
+          "A localidade e suas evidências são sintéticas."
+        ],
+        "missing_data": [
+          "capacidade de backhaul verificada"
+        ],
+        "confidence_level": "low"
+      },
+      {
+        "agent_name": "budget",
+        "position": "insufficient_data",
+        "summary": "A premissa do cenário não pode ser reconciliada com evidência de custo rastreável; não é possível validar o enquadramento orçamentário.",
+        "supporting_evidence_ids": [],
+        "risks": [
+          "Custos hipotéticos não são orçamento executivo nem cotação validada.",
+          "A comparação não inclui itens que não estejam nas premissas fornecidas."
+        ],
+        "assumptions": [
+          "O teto informado é uma premissa de cenário e não comprova dotação orçamentária.",
+          "A localidade e suas evidências são sintéticas."
+        ],
+        "missing_data": [
+          "evidência de custo compatível com a premissa do cenário",
+          "validação e aprovação orçamentária"
+        ],
+        "confidence_level": "low"
+      }
+    ],
+    "bridge_proposal": {
+      "candidates": [
+        {
+          "institution_id": "DEMO001-SCHOOL-01",
+          "rationale": "O status de conectividade é desconhecido; verificar necessidade em campo.",
+          "evidence_ids": [
+            "DEMO001-GAP-01"
+          ],
+          "assumptions": [
+            "A necessidade e a viabilidade de articulação dependem de validação local."
+          ],
+          "partnership_status": "unverified",
+          "priority": "medium",
+          "caveats": [
+            "Candidatura não representa parceria, contrato ou autorização confirmada.",
+            "Instituição e dados são sintéticos e servem apenas à demonstração."
+          ]
+        },
+        {
+          "institution_id": "DEMO001-HEALTH-01",
+          "rationale": "O status de conectividade é desconhecido; verificar necessidade em campo.",
+          "evidence_ids": [
+            "DEMO001-GAP-01"
+          ],
+          "assumptions": [
+            "A necessidade e a viabilidade de articulação dependem de validação local."
+          ],
+          "partnership_status": "unverified",
+          "priority": "medium",
+          "caveats": [
+            "Candidatura não representa parceria, contrato ou autorização confirmada.",
+            "Instituição e dados são sintéticos e servem apenas à demonstração."
+          ]
+        }
+      ],
+      "notes": [
+        "Prioridade qualitativa deriva apenas do status de conectividade cadastrado.",
+        "As candidatas exigem confirmação local; nenhuma parceria é presumida."
+      ]
+    },
+    "baseline": {
+      "scenario_name": "Base",
+      "selected_anchor_ids": [],
+      "estimated_total_cost_brl": 350000.0,
+      "hypothetical_anchor_revenue_brl": 0.0,
+      "hypothetical_net_balance_brl": 0.0,
+      "within_budget": true,
+      "calculation_notes": [
+        "Custo base informado como premissa estimada/hipotética.",
+        "Receita de âncoras é zero no cenário base; outras receitas não estão incluídas."
+      ],
+      "warnings": [
+        "Simulação hipotética; não representa proposta comercial nem orçamento de engenharia."
+      ]
+    },
+    "with_bridges": {
+      "scenario_name": "Com Pontes",
+      "selected_anchor_ids": [
+        "DEMO001-SCHOOL-01"
+      ],
+      "estimated_total_cost_brl": 390000.0,
+      "hypothetical_anchor_revenue_brl": 14400.0,
+      "hypothetical_net_balance_brl": -25600.0,
+      "within_budget": true,
+      "calculation_notes": [
+        "Custo adicional = 1 instituição(ões) × custo estimado por instituição.",
+        "Receita hipotética considera instituições selecionadas e horizonte informado.",
+        "Saldo não é ROI, lucro, NPV, viabilidade ou receita contratada."
+      ],
+      "warnings": [
+        "Simulação hipotética; não representa proposta comercial nem orçamento de engenharia.",
+        "Localidade e evidências são sintéticas; resultado é apenas demonstrativo."
+      ]
+    },
+    "comparison": {
+      "baseline_cost_brl": 350000.0,
+      "with_bridges_cost_brl": 390000.0,
+      "incremental_cost_brl": 40000.0,
+      "incremental_hypothetical_revenue_brl": 14400.0,
+      "hypothetical_net_balance_brl": -25600.0,
+      "within_budget": true,
+      "warnings": [
+        "Simulação hipotética; não representa proposta comercial nem orçamento de engenharia.",
+        "Localidade e evidências são sintéticas; resultado é apenas demonstrativo."
+      ]
+    },
+    "disagreements": [
+      {
+        "topic": "technical-feasibility-and-budget",
+        "opinions": [
+          "technical: conditional — Há indicadores técnicos para triagem, mas eles não comprovam infraestrutura instalada ou capacidade de atendimento; é necessário survey de campo.",
+          "budget: insufficient_data — A premissa do cenário não pode ser reconciliada com evidência de custo rastreável; não é possível validar o enquadramento orçamentário."
+        ],
+        "resolution_status": "requires_human_review",
+        "questions": [
+          "Que evidência adicional resolve a divergência entre technical e budget?",
+          "Quais premissas precisam de validação antes de uma decisão?"
+        ]
+      }
+    ],
+    "guardian": {
+      "decision": "REVISAO_HUMANA",
+      "original_decision": null,
+      "final_decision": null,
+      "guard_reasons": [
+        "Divergência material entre as perspectivas técnica e financeira requer revisão humana.",
+        "Não há evidência crítica disponível sobre conectividade."
+      ],
+      "rationale": "As lacunas, divergências ou incertezas do cenário impedem uma conclusão operacional; é necessária revisão humana. A rodada de contestação identificou: technical-feasibility-and-budget. Salvaguardas aplicadas: Divergência material entre as perspectivas técnica e financeira requer revisão humana.; Não há evidência crítica disponível sobre conectividade.",
+      "conditions": [
+        "Validar em campo cobertura, infraestrutura e capacidade de backhaul.",
+        "Validar custos e orçamento antes de qualquer decisão operacional.",
+        "Ponderar prioridade social junto aos custos e riscos técnicos, sem substituir validação humana."
+      ],
+      "blockers": [],
+      "unresolved_questions": [
+        "preço e taxa de adesão",
+        "ARPU, margem e dados comerciais observados",
+        "medição observada de acesso à conectividade",
+        "efeitos distributivos e resultados locais em educação e saúde",
+        "consulta e validação com instituições públicas",
+        "capacidade de backhaul verificada",
+        "evidência de custo compatível com a premissa do cenário",
+        "validação e aprovação orçamentária"
+      ],
+      "cited_evidence_ids": [
+        "DEMO001-DEMAND-01",
+        "DEMO001-COST-01",
+        "DEMO001-GAP-01",
+        "DEMO001-COVERAGE-01",
+        "DEMO001-TECH-01",
+        "DEMO001-BACKHAUL-01",
+        "DEMO001-SITES-01",
+        "DEMO001-POWER-01"
+      ],
+      "requires_human_approval": true
+    },
+    "evidence_catalog": [
+      {
+        "evidence_id": "DEMO001-POP-01",
+        "indicator": "population_estimate",
+        "value": 18000,
+        "unit": "people",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Valor hipotético para fixture; não representa população observada."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-DEMAND-01",
+        "indicator": "demand_proxy_index",
+        "value": 86,
+        "unit": "points (0-100)",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Índice ilustrativo sem método empírico ou validade preditiva."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-GAP-01",
+        "indicator": "social_access_gap_pct",
+        "value": 18,
+        "unit": "%",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Percentual hipotético, criado apenas para demonstração."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-INCOME-01",
+        "indicator": "monthly_income_proxy_brl",
+        "value": 3400,
+        "unit": "BRL/month",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Proxy e valor hipotéticos; não descrevem pessoas ou famílias reais."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-COVERAGE-01",
+        "indicator": "reported_coverage_pct",
+        "value": 72,
+        "unit": "%",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Cobertura hipotética; não é medição nem declaração de operadora."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-COST-01",
+        "indicator": "estimated_base_cost_brl",
+        "value": 420000,
+        "unit": "BRL",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Custo hipotético, sem orçamento de engenharia."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-TECH-01",
+        "indicator": "technical_constraint_level",
+        "value": "moderada",
+        "unit": "category",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Classificação inventada para compor o cenário de teste."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-BACKHAUL-01",
+        "indicator": "backhaul_capacity_mbps",
+        "value": null,
+        "unit": "Mbps",
+        "kind": "unavailable",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Capacidade de backhaul não disponível nesta fixture."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-SITES-01",
+        "indicator": "powered_sites_estimate",
+        "value": 6,
+        "unit": "sites",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Quantidade hipotética; não representa infraestrutura existente."
+        ]
+      },
+      {
+        "evidence_id": "DEMO001-POWER-01",
+        "indicator": "electricity_availability",
+        "value": "partial",
+        "unit": "category",
+        "kind": "hypothetical",
+        "source_name": "Cenário sintético de demonstração",
+        "source_url": null,
+        "source_license": null,
+        "reference_year": null,
+        "collected_at": null,
+        "is_synthetic": true,
+        "limitations": [
+          "Categoria hipotética, sem levantamento de campo."
+        ]
+      }
+    ],
+    "warnings": [
+      "Dados sintéticos: esta análise é demonstrativa, não operacional."
+    ],
+    "errors": [],
+    "status": "completed",
+    "mode": "mock"
+  }
+}
