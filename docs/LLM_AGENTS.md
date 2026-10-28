@@ -57,6 +57,8 @@ Inicie a API e o dashboard como no README e execute uma análise de demonstraç�
 
 Referências oficiais: [instalação Linux](https://ollama.com/download/linux), [saídas estruturadas](https://docs.ollama.com/capabilities/structured-outputs) e [API de chat](https://docs.ollama.com/api/chat).
 
+O histórico de disponibilidade, modelos e timeouts observados neste projeto está em [OLLAMA_DIAGNOSTIC.md](OLLAMA_DIAGNOSTIC.md). Ele separa erros reais relatados pelo usuário dos testes do adapter com provedor simulado.
+
 ## Validação e evidências
 
 As respostas são validadas com `AgentOpinion` do Pydantic. Um erro de schema permite no máximo um retry com feedback contendo apenas localização e descrição do erro, sem os valores de entrada. Se a resposta continuar inválida, o agente falha explicitamente. Posições conclusivas sem evidência de suporte e referências a `evidence_id` inexistente ou duplicado invalidam o parecer sem conversão para resultado confiável.
